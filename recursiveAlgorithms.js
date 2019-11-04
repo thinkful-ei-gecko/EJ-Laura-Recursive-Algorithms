@@ -35,20 +35,15 @@ allSheep(3)
 // powerCalculator(2, 5);
 
 // Reverse String
+ function reverseString(str){
+     //base case
+     if(str === ''){
+         return '';
+     }
 
-// function reverseString(string){
+     const char = str[str.length - 1]
+     console.log(char);
 
-//     //base case
-//     if(string === ''){
-//         return console.log('');
-//     }
-
-//     //general case
-//     const char = string[string.length - 1]
-//     console.log(char)
-
-//     return reverseString(string.substring(0, string.length - 1))
-
-// }
-
-// reverseString('dog')
+     return char + reverseString(str.substring(0, str.length - 1))
+ }
+ console.log(reverseString('dog'));
